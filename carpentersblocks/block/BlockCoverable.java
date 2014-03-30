@@ -136,8 +136,8 @@ public class BlockCoverable extends BlockContainer {
     {
         TileEntity TE = world.getTileEntity(x, y, z);
         
-        if (world.getBlock(x, y, z).equals(this) || TE != null && TE instanceof TEBase) {
-            return (TEBase) world.getTileEntity(x, y, z);
+        if (TE != null && TE instanceof TEBase) {
+            return (TEBase) TE;
         } else {
             return null;
         }
